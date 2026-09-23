@@ -1,17 +1,46 @@
-# passport_photo_maker
+# Passport Photo Maker (passport_photo_maker)
 
-A new Flutter project.
+Studio-grade passport-photo app — guided wizard, AI photo restoration, outfit fitting and print sheets.
+
+## Features
+
+- Step-by-step photo wizard with camera guide overlay
+- Editor: background, crop, adjustments, quality badge
+- AI enhance and ONNX/on-device restoration with before-after slider
+- Outfit gallery, fitting studio and extractor/renderer
+- Templates, print-sheet layouts and export/share
+- Project history, onboarding and settings
+
+## Tech Stack
+
+- Flutter (Dart)
+- GetX for state management and routing
+- On-device ML (ONNX restoration, segmentation)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```bash
+flutter pub get
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
+Build a release APK:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```bash
+flutter build apk --release
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+
+```
+lib/
+├── app/modules/   # Wizard, camera, editor, restoration, outfit, print, export
+├── core/          # Services (AI, image processing, storage), theme, utils
+├── data/          # Models and repositories
+└── main.dart      # App entry point
+```
+
+## Notes
+
+- App label: "Passport Photo Maker" (Android)
+- No secrets, keystores or Firebase configs are committed to this repository.
