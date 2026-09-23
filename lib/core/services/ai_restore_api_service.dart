@@ -7,11 +7,9 @@ import '../../data/models/restoration_models.dart';
 import 'photo_restoration_service.dart';
 
 class AiRestoreApiService {
-  // Get API token from dart-define, fallback to provided Replicate token
-  static const String _apiToken = String.fromEnvironment(
-    'REPLICATE_API_TOKEN',
-    defaultValue: 'r8_YQUx5iCdKZNwZKPTR9G9Hdz1zjOquNo1KvsVY',
-  );
+  // API token MUST be provided at build time via --dart-define. Never commit tokens.
+  // Example: flutter run --dart-define=REPLICATE_API_TOKEN=r8_your_token_here
+  static const String _apiToken = String.fromEnvironment('REPLICATE_API_TOKEN');
   static const String _apiUrl = 'https://api.replicate.com/v1/predictions';
   // GFPGAN model version on Replicate (tencentarc/gfpgan)
   static const String _gfpganVersion = '0fbacf7afc6c144e5be9767cff80f25aff23e52b0708f17e20f9879b2f21516c';
